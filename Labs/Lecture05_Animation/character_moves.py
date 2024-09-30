@@ -7,6 +7,7 @@ character = load_image('character.png')
 
 # 여기를 채우세요.
 
+<<<<<<< HEAD
 status = 0
 x = 0
 while(True):
@@ -18,3 +19,7 @@ while(True):
         delay(0.01)
 
 close_canvas()
+=======
+close_canvas()
+
+>>>>>>> e258ca78260fbd103b027078f7a023f29c2e3563
