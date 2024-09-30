@@ -24,3 +24,5 @@ turtle.onkey(lambda: move('right'), 'Right')
 turtle.onkey(lambda: move('up'), 'Up')
 turtle.onkey(lambda: move('down'), 'Down')
 
+turtle.onkey(lambda: turtle.reset(), 'Escape')
+
