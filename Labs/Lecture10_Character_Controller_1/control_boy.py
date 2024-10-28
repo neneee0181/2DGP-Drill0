@@ -1,10 +1,6 @@
 from pico2d import *
-
 from Labs.Lecture10_Character_Controller_1.Boy import Boy
 from Labs.Lecture10_Character_Controller_1.grass import Grass
-
-
-# Game object class here
 
 def handle_events():
     global running
