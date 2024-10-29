@@ -2,6 +2,7 @@ from pico2d import *
 from Labs.Lecture10_Character_Controller_1.Boy import Boy
 from Labs.Lecture10_Character_Controller_1.grass import Grass
 
+
 def handle_events():
     global running
 
@@ -12,7 +13,8 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False
         else:
-            boy.handle_event(event)
+            if event.type in (SDL_MOUSEBUTTONDOWN, SDL_KEYUP):
+                boy.handle_event(event)
 
 
 def reset_world():
@@ -30,7 +32,6 @@ def reset_world():
 
     boy = Boy()
     world.append(boy)
-
 
 
 def update_world():
