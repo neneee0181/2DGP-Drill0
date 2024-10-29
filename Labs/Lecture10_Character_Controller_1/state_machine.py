@@ -30,9 +30,6 @@ class StateMachine:
                     self.cur_state = next_state
                     self.cur_state.enter(self.o)
                     return
-
-
-
         pass
 
     def start(self, start_state):
