@@ -13,7 +13,7 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False
         else:
-            if event.type in (SDL_MOUSEBUTTONDOWN, SDL_KEYUP):
+            if event.type in (SDL_KEYDOWN, SDL_KEYUP):
                 boy.handle_event(event)
 
 
