@@ -2,6 +2,7 @@ from pico2d import *
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import random
 
 class Ball:
@@ -32,6 +33,10 @@ class Ball:
 
 # Game object class here
 >>>>>>> 28126e585c4bf95e61a8c4fec11346bca046c983
+=======
+
+# Game object class here
+>>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
 
 def handle_events():
     global running
@@ -44,6 +49,7 @@ def handle_events():
 
 open_canvas()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +84,8 @@ close_canvas()
 >>>>>>> 6cb1cb5eaedcd79e9ca86a683e1df8c5b8a91b55
 =======
 >>>>>>> 28126e585c4bf95e61a8c4fec11346bca046c983
+=======
+>>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
 # initialization code
 
 # game main loop code
@@ -87,8 +95,11 @@ close_canvas()
 close_canvas()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 6cb1cb5eaedcd79e9ca86a683e1df8c5b8a91b55
 =======
 >>>>>>> 6cb1cb5eaedcd79e9ca86a683e1df8c5b8a91b55
 =======
 >>>>>>> 28126e585c4bf95e61a8c4fec11346bca046c983
+=======
+>>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c

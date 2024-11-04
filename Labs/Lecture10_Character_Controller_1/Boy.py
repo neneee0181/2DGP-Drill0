@@ -114,9 +114,6 @@ class Boy:
         self.state_machine.start(Idle)
         self.state_machine.set_transitions(
             {
-                # Sleep: {space_down: Idle},
-                # Idle: {time_out: Sleep},
-                # Run:{}
                 Idle: {right_down: Run, left_down: Run, left_up: Run, right_up: Run, time_out: Sleep},
                 Run: {right_down: Idle, left_down: Idle, left_up: Idle, right_up: Idle},
                 Sleep: {right_down: Run, left_down: Run, left_up: Run, right_up: Run, space_down: Idle}

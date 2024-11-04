@@ -17,6 +17,7 @@ class Grass:
 
 class Boy:
 <<<<<<< HEAD
+<<<<<<< HEAD
     image = None
     def __init__(self):
         self.x, self.y = random.randint(0, 800), 90  #random 함수가 반복문 수만큼 호출
@@ -25,12 +26,17 @@ class Boy:
             Boy.image = load_image('run_animation.png') # 이미지를 반복문 수 만큼 호출하기 때문에 문제가 됨 (객체기 때문에 메모리에 낭비하게됨) # 정적으로 해주면됨
         
 =======
+=======
+>>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
     def __init__(self):
         self.x, self.y = random.randint(0, 800), 90
         self.frame = 0
         self.image = load_image('run_animation.png')
 
+<<<<<<< HEAD
 >>>>>>> 28126e585c4bf95e61a8c4fec11346bca046c983
+=======
+>>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
     def update(self):
         self.frame = (self.frame + 1) % 8
         self.x += 5
