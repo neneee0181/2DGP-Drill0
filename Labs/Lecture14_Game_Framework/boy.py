@@ -1,7 +1,11 @@
 # 이것은 각 상태들을 객체로 구현한 것임.
 
 from pico2d import get_time, load_image, SDL_KEYDOWN, SDL_KEYUP, SDLK_SPACE, SDLK_LEFT, SDLK_RIGHT
+
+from Labs.Lecture14_Game_Framework.ball import BigBall
 from state_machine import *
+from ball import Ball
+import game_world
 
 
 class Idle:
@@ -22,12 +26,8 @@ class Idle:
 
     @staticmethod
     def exit(boy, e):
-<<<<<<< HEAD
         if space_down(e):
             boy.fire_ball()
-=======
->>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
-        pass
 
     @staticmethod
     def do(boy):
@@ -40,10 +40,6 @@ class Idle:
         boy.image.clip_draw(boy.frame * 100, boy.action * 100, 100, 100, boy.x, boy.y)
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
 class Sleep:
     @staticmethod
     def enter(boy, e):
@@ -73,29 +69,16 @@ class Sleep:
 class Run:
     @staticmethod
     def enter(boy, e):
-<<<<<<< HEAD
         if right_down(e) or left_up(e):  # 오른쪽으로 RUN
             boy.dir, boy.face_dir, boy.action = 1, 1, 1
         elif left_down(e) or right_up(e):  # 왼쪽으로 RUN
-=======
-        if right_down(e) or left_up(e): # 오른쪽으로 RUN
-            boy.dir, boy.face_dir, boy.action = 1, 1, 1
-        elif left_down(e) or right_up(e): # 왼쪽으로 RUN
->>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
             boy.dir, boy.face_dir, boy.action = -1, -1, 0
 
     @staticmethod
     def exit(boy, e):
-<<<<<<< HEAD
         if space_down(e):
             boy.fire_ball()
-        pass
 
-=======
-        pass
-
-
->>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
     @staticmethod
     def do(boy):
         boy.frame = (boy.frame + 1) % 8
@@ -107,12 +90,6 @@ class Run:
         boy.image.clip_draw(boy.frame * 100, boy.action * 100, 100, 100, boy.x, boy.y)
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
 class Boy:
 
     def __init__(self):
@@ -123,16 +100,12 @@ class Boy:
         self.state_machine.start(Idle)
         self.state_machine.set_transitions(
             {
-<<<<<<< HEAD
                 Idle: {right_down: Run, left_down: Run, left_up: Run, right_up: Run, time_out: Sleep, space_down: Idle},
-                Run: {right_down: Idle, left_down: Idle, right_up: Idle, left_up: Idle, space_down: Idle},
-=======
-                Idle: {right_down: Run, left_down: Run, left_up: Run, right_up: Run, time_out: Sleep},
-                Run: {right_down: Idle, left_down: Idle, right_up: Idle, left_up: Idle},
->>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
+                Run: {right_down: Idle, left_down: Idle, right_up: Idle, left_up: Idle, space_down: Run},
                 Sleep: {right_down: Run, left_down: Run, right_up: Run, left_up: Run, space_down: Idle}
             }
         )
+        self.set_item('None')
 
     def update(self):
         self.state_machine.update()
@@ -145,11 +118,13 @@ class Boy:
     def draw(self):
         self.state_machine.draw()
 
-<<<<<<< HEAD
     def fire_ball(self):
-        if self.face_dir == -1:
-            print('FIRE BALL LEFT')
-        elif self.face_dir == 1:
-            print('FIRE BALL RIGHT')
-=======
->>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
+        if self.item == 'SmallBall':
+            ball = Ball(self.x, self.y, self.face_dir * 10)
+            game_world.add_object(ball)
+        elif self.item == 'BigBall':
+            ball = BigBall(self.x, self.y, self.face_dir * 10)
+            game_world.add_object(ball)
+
+    def set_item(self, item):
+        self.item = item

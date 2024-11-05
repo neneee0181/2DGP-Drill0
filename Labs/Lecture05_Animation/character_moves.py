@@ -14,6 +14,7 @@ character = load_image('character.png')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 status = 0
 x = 0
 while(True):
@@ -53,3 +54,7 @@ close_canvas()
 close_canvas()
 
 >>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
+=======
+close_canvas()
+
+>>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
