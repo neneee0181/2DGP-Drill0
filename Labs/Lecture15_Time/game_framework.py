@@ -1,8 +1,5 @@
 import time
 
-running = None
-stack = None
-
 
 def change_mode(mode):
     global stack
@@ -51,7 +48,7 @@ def run(start_mode):
     frame_time = 0.0
     current_time = 0.0
 
-    while (running):
+    while running:
         stack[-1].handle_events()
         stack[-1].update()
         stack[-1].draw()

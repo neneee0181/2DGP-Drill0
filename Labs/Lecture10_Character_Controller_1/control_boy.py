@@ -1,11 +1,14 @@
 from pico2d import *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from Labs.Lecture10_Character_Controller_1.Boy import Boy
 from Labs.Lecture10_Character_Controller_1.grass import Grass
 =======
 =======
 >>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
+=======
+>>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 import random
 
 
@@ -39,9 +42,12 @@ class Boy:
     def draw(self):
         self.image.clip_draw(self.frame * 100, self.action * 100, 100, 100, self.x, self.y)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
 =======
 >>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
+=======
+>>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 
 
 def handle_events():
@@ -56,6 +62,7 @@ def handle_events():
         else:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if event.type in (SDL_KEYDOWN, SDL_KEYUP):
                 boy.handle_event(event)
 =======
@@ -64,6 +71,9 @@ def handle_events():
 =======
             boy.handle_event(event)
 >>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
+=======
+            boy.handle_event(event)
+>>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 
 
 def reset_world():
@@ -85,12 +95,16 @@ def reset_world():
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
 =======
 
 >>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
+=======
+
+>>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 def update_world():
     for o in world:
         o.update()
