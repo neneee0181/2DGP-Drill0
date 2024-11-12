@@ -154,4 +154,7 @@ class Boy:
 
     def handle_collision(self, group, other):
         # fill here
-        pass
+        if group == 'boy:ball':
+            self.ball_count += 1
+
+    pass
