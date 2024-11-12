@@ -1,14 +1,14 @@
+import random
+
 from pico2d import *
 import game_framework
 
 import game_world
 from grass import Grass
-<<<<<<< HEAD
-from bird import Boy
-
-=======
 from boy import Boy
->>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+from ball import Ball
+from zombie import Zombie
+
 
 # boy = None
 
@@ -22,12 +22,8 @@ def handle_events():
         else:
             boy.handle_event(event)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
 def init():
-    global grass
     global boy
 
     grass = Grass()
@@ -36,6 +32,11 @@ def init():
     boy = Boy()
     game_world.add_object(boy, 1)
 
+    # fill here
+    global balls
+    balls = [Ball(random.randint(100, 1500), 60, 0) for _ in range(30)]
+    game_world.add_objects(balls, 1)
+
 
 def finish():
     game_world.clear()
@@ -43,20 +44,22 @@ def finish():
 
 
 def update():
-    game_world.update()
-<<<<<<< HEAD
-    # 성능이 후진 컴터
-    # delay(0.5)
+    game_world.update()  # 소년과 볼 위치가 다 업데이트 완료
+    # fill here 여기서 충돌 검사
+    for ball in balls.copy():  # 카피를 사용해서 복사본을 사용하지만 실제로 지울땐 원본값을 지우기.
+        if game_world.collide(boy, ball):
+            print('COLLISION boy:ball')
+            # 소년 볼 증가
+            boy.ball_count += 1
+            game_world.remove_object(ball)
+            balls.remove(ball)
 
-=======
->>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
 
 def draw():
     clear_canvas()
     game_world.render()
     update_canvas()
 
-<<<<<<< HEAD
 
 def pause():
     pass
@@ -64,11 +67,3 @@ def pause():
 
 def resume():
     pass
-=======
-def pause():
-    pass
-
-def resume():
-    pass
-
->>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
