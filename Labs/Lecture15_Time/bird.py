@@ -41,13 +41,17 @@ class Idle:
 
     @staticmethod
     def do(boy):
-        boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 8
+        boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 4
         if get_time() - boy.wait_time > 2:
             boy.state_machine.add_event(('TIME_OUT', 0))
 
     @staticmethod
     def draw(boy):
-        boy.image.clip_draw(int(boy.frame) * 100, boy.action * 100, 100, 100, boy.x, boy.y)
+        if (boy.face_dir == 1):
+            boy.image.clip_draw(int(boy.frame) * 182, 0 * 160, 182, 160, boy.x, boy.y)
+        elif (boy.face_dir == -1):
+            boy.image.clip_composite_draw(int(boy.frame) * 182, 0 * 160, 182, 160, 0, 'h', boy.x, boy.y, 182,
+                                          160)
 
 
 class Sleep:
@@ -80,7 +84,7 @@ class Run:
     @staticmethod
     def enter(boy, e):
         if right_down(e) or left_up(e):  # 오른쪽으로 RUN
-            boy.dir, boy.face_dir, boy.action = 1, 1, 1
+            boy.dir, boy.face_dir, boy.action = 1, 1, 0
         elif left_down(e) or right_up(e):  # 왼쪽으로 RUN
             boy.dir, boy.face_dir, boy.action = -1, -1, 0
 
@@ -91,12 +95,16 @@ class Run:
 
     @staticmethod
     def do(boy):
-        boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 8
+        boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 4
         boy.x += boy.dir * RUN_SPEED_PPS * game_framework.frame_time
 
     @staticmethod
     def draw(boy):
-        boy.image.clip_draw(int(boy.frame) * 100, boy.action * 100, 100, 100, boy.x, boy.y)
+        if (boy.face_dir == 1):
+            boy.image.clip_draw(int(boy.frame) * 182, boy.action * 160, 182, 160, boy.x, boy.y)
+        elif (boy.face_dir == -1):
+            boy.image.clip_composite_draw(int(boy.frame) * 182, boy.action * 160, 182, 160, 0, 'h', boy.x, boy.y, 182,
+                                          160)
 
 
 class Boy:
@@ -104,14 +112,14 @@ class Boy:
     def __init__(self):
         self.x, self.y = 400, 90
         self.face_dir = 1
-        self.image = load_image('animation_sheet.png')
+        self.image = load_image('bird_animation.png')
         self.state_machine = StateMachine(self)
         self.state_machine.start(Idle)
         self.state_machine.set_transitions(
             {
-                Idle: {right_down: Run, left_down: Run, left_up: Run, right_up: Run, time_out: Sleep, space_down: Idle},
+                Idle: {right_down: Run, left_down: Run, left_up: Run, right_up: Run, space_down: Idle},
                 Run: {right_down: Idle, left_down: Idle, right_up: Idle, left_up: Idle, space_down: Run},
-                Sleep: {right_down: Run, left_down: Run, right_up: Run, left_up: Run, space_down: Idle}
+                Sleep: {}
             }
         )
         self.font = load_font('ENCR10B.TTF', 16)
