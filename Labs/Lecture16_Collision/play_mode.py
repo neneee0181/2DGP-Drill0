@@ -41,11 +41,14 @@ def init():
     game_world.add_collision_pair('boy:ball', boy, None)
     for ball in balls:
         game_world.add_collision_pair('boy:ball', None, ball)
-
+        game_world.add_collision_pair('zombie:ball', None, ball)
 
     #zombie 5 add
     zombies = [Zombie() for _ in range(5)]
     game_world.add_objects(zombies, 1)
+
+    for zombie in zombies:
+        game_world.add_collision_pair('zombie:ball', zombie, None)
 
 
 def finish():
@@ -56,15 +59,6 @@ def finish():
 def update():
     game_world.update()  # 소년과 볼 위치가 다 업데이트 완료
     game_world.handle_collisions()
-    # fill here 여기서 충돌 검사
-    # for ball in balls.copy():  # 카피를 사용해서 복사본을 사용하지만 실제로 지울땐 원본값을 지우기.
-    #     if game_world.collide(boy, ball):
-    #         print('COLLISION boy:ball')
-    #         # 소년 볼 증가
-    #         boy.ball_count += 1
-    #         game_world.remove_object(ball)
-    #         balls.remove(ball)
-
 
 def draw():
     clear_canvas()
