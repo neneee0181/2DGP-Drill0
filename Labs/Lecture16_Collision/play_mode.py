@@ -37,6 +37,11 @@ def init():
     balls = [Ball(random.randint(100, 1500), 60, 0) for _ in range(30)]
     game_world.add_objects(balls, 1)
 
+    # 충돌 정보를 등록
+    game_world.add_collision_pair('boy:ball', boy, None)
+    for ball in balls:
+        game_world.add_collision_pair('boy:ball', None, ball)
+
 
 def finish():
     game_world.clear()
@@ -45,14 +50,15 @@ def finish():
 
 def update():
     game_world.update()  # 소년과 볼 위치가 다 업데이트 완료
+    game_world.handle_collisions()
     # fill here 여기서 충돌 검사
-    for ball in balls.copy():  # 카피를 사용해서 복사본을 사용하지만 실제로 지울땐 원본값을 지우기.
-        if game_world.collide(boy, ball):
-            print('COLLISION boy:ball')
-            # 소년 볼 증가
-            boy.ball_count += 1
-            game_world.remove_object(ball)
-            balls.remove(ball)
+    # for ball in balls.copy():  # 카피를 사용해서 복사본을 사용하지만 실제로 지울땐 원본값을 지우기.
+    #     if game_world.collide(boy, ball):
+    #         print('COLLISION boy:ball')
+    #         # 소년 볼 증가
+    #         boy.ball_count += 1
+    #         game_world.remove_object(ball)
+    #         balls.remove(ball)
 
 
 def draw():
