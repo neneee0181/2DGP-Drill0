@@ -21,6 +21,7 @@ class Boy:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     image = None
     def __init__(self):
         self.x, self.y = random.randint(0, 800), 90  #random 함수가 반복문 수만큼 호출
@@ -37,11 +38,14 @@ class Boy:
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
     def __init__(self):
         self.x, self.y = random.randint(0, 800), 90
         self.frame = 0
         self.image = load_image('run_animation.png')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +59,8 @@ class Boy:
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
     def update(self):
         self.frame = (self.frame + 1) % 8
         self.x += 5

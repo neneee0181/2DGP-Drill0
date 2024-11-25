@@ -21,6 +21,18 @@ ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
 FRAMES_PER_ACTION = 8
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 class Idle:
     @staticmethod
     def enter(boy, e):
@@ -44,7 +56,11 @@ class Idle:
 
     @staticmethod
     def do(boy):
+<<<<<<< HEAD
         boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 8
+=======
+        boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
         # boy.frame = (boy.frame + 1) % 8
         if get_time() - boy.wait_time > 2:
             boy.state_machine.add_event(('TIME_OUT', 0))
@@ -54,6 +70,10 @@ class Idle:
         boy.image.clip_draw(int(boy.frame) * 100, boy.action * 100, 100, 100, boy.x, boy.y)
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 class Sleep:
     @staticmethod
     def enter(boy, e):
@@ -69,7 +89,12 @@ class Sleep:
     @staticmethod
     def do(boy):
         # boy.frame = (boy.frame + 1) % 8
+<<<<<<< HEAD
         boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 8
+=======
+        boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 
     @staticmethod
     def draw(boy):
@@ -84,9 +109,15 @@ class Sleep:
 class Run:
     @staticmethod
     def enter(boy, e):
+<<<<<<< HEAD
         if right_down(e) or left_up(e):  # 오른쪽으로 RUN
             boy.dir, boy.face_dir, boy.action = 1, 1, 1
         elif left_down(e) or right_up(e):  # 왼쪽으로 RUN
+=======
+        if right_down(e) or left_up(e): # 오른쪽으로 RUN
+            boy.dir, boy.face_dir, boy.action = 1, 1, 1
+        elif left_down(e) or right_up(e): # 왼쪽으로 RUN
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
             boy.dir, boy.face_dir, boy.action = -1, -1, 0
 
     @staticmethod
@@ -94,12 +125,20 @@ class Run:
         if space_down(e):
             boy.fire_ball()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
     @staticmethod
     def do(boy):
         # boy.frame = (boy.frame + 1) % 8
         # boy.x += boy.dir * 5
 
+<<<<<<< HEAD
         boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 8
+=======
+        boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 
         boy.x += boy.dir * RUN_SPEED_PPS * game_framework.frame_time
         pass
@@ -109,6 +148,12 @@ class Run:
         boy.image.clip_draw(int(boy.frame) * 100, boy.action * 100, 100, 100, boy.x, boy.y)
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 class Boy:
 
     def __init__(self):
@@ -137,12 +182,17 @@ class Boy:
 
     def draw(self):
         self.state_machine.draw()
+<<<<<<< HEAD
         self.font.draw(self.x - 10, self.y + 50, f'{self.ball_count:02d}', (255, 255, 0))
         draw_rectangle(*self.get_bb())
+=======
+        self.font.draw(self.x-10, self.y + 50, f'{self.ball_count:02d}', (255, 255, 0))
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 
     def fire_ball(self):
         if self.ball_count > 0:
             self.ball_count -= 1
+<<<<<<< HEAD
             ball = Ball(self.x, self.y, self.face_dir * 10)
             game_world.add_object(ball)
 
@@ -150,12 +200,23 @@ class Boy:
         # fill here
         # 네개의 값을 리턴하는데, 사실은 한개의 튜플을 리턴함.
         return self.x - 20, self.y - 50, self.x + 20, self.y + 50
+=======
+            ball = Ball(self.x, self.y, self.face_dir*10)
+            game_world.add_object(ball)
+
+    def get_bb(self):
+        # fill here
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
         pass
 
     def handle_collision(self, group, other):
         # fill here
+<<<<<<< HEAD
         if group == 'boy:ball':
             self.ball_count += 1
 
 
     pass
+=======
+        pass
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd

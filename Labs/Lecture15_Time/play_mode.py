@@ -4,11 +4,15 @@ import game_framework
 import game_world
 from grass import Grass
 <<<<<<< HEAD
+<<<<<<< HEAD
 from bird import Boy
 
 =======
 from boy import Boy
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+from boy import Boy
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 
 # boy = None
 
@@ -23,9 +27,12 @@ def handle_events():
             boy.handle_event(event)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 def init():
     global grass
     global boy
@@ -45,17 +52,21 @@ def finish():
 def update():
     game_world.update()
 <<<<<<< HEAD
+<<<<<<< HEAD
     # 성능이 후진 컴터
     # delay(0.5)
 
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 
 def draw():
     clear_canvas()
     game_world.render()
     update_canvas()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 def pause():
@@ -65,10 +76,15 @@ def pause():
 def resume():
     pass
 =======
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 def pause():
     pass
 
 def resume():
     pass
 
+<<<<<<< HEAD
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd

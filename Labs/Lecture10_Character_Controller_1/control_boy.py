@@ -3,6 +3,7 @@ from pico2d import *
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from Labs.Lecture10_Character_Controller_1.Boy import Boy
 from Labs.Lecture10_Character_Controller_1.grass import Grass
 =======
@@ -12,6 +13,8 @@ from Labs.Lecture10_Character_Controller_1.grass import Grass
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 import random
 
 
@@ -47,6 +50,7 @@ class Boy:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
 =======
 >>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
@@ -54,6 +58,8 @@ class Boy:
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 
 
 def handle_events():
@@ -66,6 +72,7 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False
         else:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +91,9 @@ def handle_events():
 =======
             boy.handle_event(event)
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+            boy.handle_event(event)
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 
 
 def reset_world():
@@ -107,6 +117,7 @@ def reset_world():
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2a1e9505020fe82bfec1d2f4fd9632625922596c
@@ -119,6 +130,9 @@ def reset_world():
 =======
 
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 def update_world():
     for o in world:
         o.update()

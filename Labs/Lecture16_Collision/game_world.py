@@ -1,4 +1,5 @@
 world = [[] for _ in range(4)]
+<<<<<<< HEAD
 collision_pairs = {}
 
 
@@ -16,6 +17,13 @@ def add_collision_pair(group, a, b):
 
 
 def add_objects(ol, depth=0):
+=======
+
+def add_object(o, depth = 0):
+    world[depth].append(o)
+
+def add_objects(ol, depth = 0):
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
     world[depth] += ol
 
 
@@ -30,6 +38,7 @@ def render():
         for o in layer:
             o.draw()
 
+<<<<<<< HEAD
 
 def remove_collision_object(o):
     for pairs in collision_pairs.values():
@@ -45,6 +54,12 @@ def remove_object(o):
             layer.remove(o)  # world에서 o를 삭제.
             remove_collision_object(o)
             del o
+=======
+def remove_object(o):
+    for layer in world:
+        if o in layer:
+            layer.remove(o)
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
             return
     raise ValueError('Cannot delete non existing object')
 
@@ -54,6 +69,7 @@ def clear():
         layer.clear()
 
 
+<<<<<<< HEAD
 # fill here
 def collide(a, b):
     left_a, bottom_a, right_a, top_a = a.get_bb()
@@ -76,3 +92,9 @@ def handle_collisions():
                     print(f'{group} collide')
                     a.handle_collision(group, b)
                     b.handle_collision(group, a)
+=======
+
+# fill here
+def collide(a, b):
+    pass
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd

@@ -3,16 +3,20 @@
 from pico2d import get_time, load_image, SDL_KEYDOWN, SDL_KEYUP, SDLK_SPACE, SDLK_LEFT, SDLK_RIGHT
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 from Labs.Lecture14_Game_Framework.ball import BigBall
 =======
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 from state_machine import *
 from ball import Ball
 import game_world
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -20,6 +24,8 @@ import game_world
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 class Idle:
     @staticmethod
     def enter(boy, e):
@@ -54,12 +60,16 @@ class Idle:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 class Sleep:
     @staticmethod
     def enter(boy, e):
@@ -91,6 +101,7 @@ class Run:
     def enter(boy, e):
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if right_down(e) or left_up(e):  # 오른쪽으로 RUN
             boy.dir, boy.face_dir, boy.action = 1, 1, 1
         elif left_down(e) or right_up(e):  # 왼쪽으로 RUN
@@ -104,6 +115,11 @@ class Run:
             boy.dir, boy.face_dir, boy.action = 1, 1, 1
         elif left_down(e) or right_up(e): # 왼쪽으로 RUN
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+        if right_down(e) or left_up(e): # 오른쪽으로 RUN
+            boy.dir, boy.face_dir, boy.action = 1, 1, 1
+        elif left_down(e) or right_up(e): # 왼쪽으로 RUN
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
             boy.dir, boy.face_dir, boy.action = -1, -1, 0
 
     @staticmethod
@@ -113,12 +129,16 @@ class Run:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
     @staticmethod
     def do(boy):
         boy.frame = (boy.frame + 1) % 8
@@ -132,6 +152,7 @@ class Run:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -142,6 +163,11 @@ class Run:
 
 
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+
+
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 class Boy:
 
     def __init__(self):
@@ -159,11 +185,14 @@ class Boy:
         )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.set_item('None')
 =======
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 
     def update(self):
         self.state_machine.update()
@@ -177,6 +206,7 @@ class Boy:
         self.state_machine.draw()
 
     def fire_ball(self):
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if self.item == 'SmallBall':
@@ -196,3 +226,7 @@ class Boy:
         ball = Ball(self.x, self.y, self.face_dir * 10)
         game_world.add_object(ball)
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+        ball = Ball(self.x, self.y, self.face_dir * 10)
+        game_world.add_object(ball)
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd

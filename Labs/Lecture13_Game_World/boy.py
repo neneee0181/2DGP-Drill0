@@ -25,6 +25,7 @@ class Idle:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if space_down(e):
             boy.fire_ball()
 =======
@@ -33,6 +34,8 @@ class Idle:
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
         pass
 
     @staticmethod
@@ -49,6 +52,7 @@ class Idle:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
@@ -58,6 +62,9 @@ class Idle:
 =======
 
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 class Sleep:
     @staticmethod
     def enter(boy, e):
@@ -90,6 +97,7 @@ class Run:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if right_down(e) or left_up(e):  # 오른쪽으로 RUN
             boy.dir, boy.face_dir, boy.action = 1, 1, 1
         elif left_down(e) or right_up(e):  # 왼쪽으로 RUN
@@ -108,10 +116,16 @@ class Run:
             boy.dir, boy.face_dir, boy.action = 1, 1, 1
         elif left_down(e) or right_up(e): # 왼쪽으로 RUN
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+        if right_down(e) or left_up(e): # 오른쪽으로 RUN
+            boy.dir, boy.face_dir, boy.action = 1, 1, 1
+        elif left_down(e) or right_up(e): # 왼쪽으로 RUN
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
             boy.dir, boy.face_dir, boy.action = -1, -1, 0
 
     @staticmethod
     def exit(boy, e):
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,6 +148,11 @@ class Run:
 
 
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+        pass
+
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
     @staticmethod
     def do(boy):
         boy.frame = (boy.frame + 1) % 8
@@ -145,6 +164,7 @@ class Run:
         boy.image.clip_draw(boy.frame * 100, boy.action * 100, 100, 100, boy.x, boy.y)
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +183,11 @@ class Run:
 
 
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+
+
+
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 class Boy:
 
     def __init__(self):
@@ -173,6 +198,7 @@ class Boy:
         self.state_machine.start(Idle)
         self.state_machine.set_transitions(
             {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +216,10 @@ class Boy:
                 Idle: {right_down: Run, left_down: Run, left_up: Run, right_up: Run, time_out: Sleep},
                 Run: {right_down: Idle, left_down: Idle, right_up: Idle, left_up: Idle},
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+                Idle: {right_down: Run, left_down: Run, left_up: Run, right_up: Run, time_out: Sleep},
+                Run: {right_down: Idle, left_down: Idle, right_up: Idle, left_up: Idle},
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
                 Sleep: {right_down: Run, left_down: Run, right_up: Run, left_up: Run, space_down: Idle}
             }
         )
@@ -208,6 +238,7 @@ class Boy:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     def fire_ball(self):
         if self.face_dir == -1:
             print('FIRE BALL LEFT')
@@ -219,3 +250,5 @@ class Boy:
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
+=======
+>>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
