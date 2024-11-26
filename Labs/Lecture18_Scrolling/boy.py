@@ -231,8 +231,8 @@ class Boy:
         sy = self.y - server.background.window_bottom
         self.image.clip_draw(int(self.frame) * 100, self.action * 100, 100, 100, sx, sy)
         self.font.draw(int(sx - 100), int(sy + 60), f'({self.x:5.5}, {self.y:5.5})', (255, 255, 0))
-        self.font.draw(sx-10, sy + 90, f'{self.ball_count}', (0, 0, 255))
-
+        self.font.draw(sx - 10, sy + 90, f'{self.ball_count}', (0, 0, 255))
+        draw_rectangle(*self.get_bb())
 
     def get_bb(self):
         sx = self.x - server.background.window_left
