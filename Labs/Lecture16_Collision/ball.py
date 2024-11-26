@@ -3,17 +3,23 @@ import game_world
 import game_framework
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class Ball:
     image = None
 
     def __init__(self, x=400, y=300, velocity=1):
 =======
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 class Ball:
     image = None
 
     def __init__(self, x = 400, y = 300, velocity = 1):
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
         if Ball.image == None:
             Ball.image = load_image('ball21x21.png')
         self.x, self.y, self.velocity = x, y, velocity
@@ -21,9 +27,12 @@ class Ball:
     def draw(self):
         self.image.draw(self.x, self.y)
 <<<<<<< HEAD
+<<<<<<< HEAD
         draw_rectangle(*self.get_bb())
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 
     def update(self):
         self.x += self.velocity * 100 * game_framework.frame_time
@@ -34,13 +43,17 @@ class Ball:
     def get_bb(self):
         # fill here
 <<<<<<< HEAD
+<<<<<<< HEAD
         return self.x - 10, self.y - 10, self.x + 10, self.y + 10
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
         pass
 
     def handle_collision(self, group, other):
         # fill here
+<<<<<<< HEAD
 <<<<<<< HEAD
         if group == 'boy:ball':
             game_world.remove_object(self)
@@ -48,3 +61,6 @@ class Ball:
 =======
         pass
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+        pass
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732

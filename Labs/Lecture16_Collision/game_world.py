@@ -1,5 +1,6 @@
 world = [[] for _ in range(4)]
 <<<<<<< HEAD
+<<<<<<< HEAD
 collision_pairs = {}
 
 
@@ -18,12 +19,17 @@ def add_collision_pair(group, a, b):
 
 def add_objects(ol, depth=0):
 =======
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 
 def add_object(o, depth = 0):
     world[depth].append(o)
 
 def add_objects(ol, depth = 0):
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
     world[depth] += ol
 
 
@@ -38,6 +44,7 @@ def render():
         for o in layer:
             o.draw()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 def remove_collision_object(o):
@@ -55,11 +62,16 @@ def remove_object(o):
             remove_collision_object(o)
             del o
 =======
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 def remove_object(o):
     for layer in world:
         if o in layer:
             layer.remove(o)
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
             return
     raise ValueError('Cannot delete non existing object')
 
@@ -69,6 +81,7 @@ def clear():
         layer.clear()
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # fill here
 def collide(a, b):
@@ -93,8 +106,13 @@ def handle_collisions():
                     a.handle_collision(group, b)
                     b.handle_collision(group, a)
 =======
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 
 # fill here
 def collide(a, b):
     pass
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732

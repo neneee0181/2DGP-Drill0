@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import time
 
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 running = None
 stack = None
 
@@ -55,6 +58,7 @@ def run(start_mode):
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     global frame_time
     frame_time = 0.0
     current_time = 0.0
@@ -63,10 +67,13 @@ def run(start_mode):
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
     while (running):
         stack[-1].handle_events()
         stack[-1].update()
         stack[-1].draw()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         frame_time = time.time() - current_time
@@ -77,6 +84,8 @@ def run(start_mode):
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 
     # repeatedly delete the top of the stack
     while (len(stack) > 0):

@@ -52,13 +52,17 @@ class Zombie:
         else:
             Zombie.images['Walk'][int(self.frame)].draw(self.x, self.y, 200, 200)
 <<<<<<< HEAD
+<<<<<<< HEAD
         draw_rectangle(*self.get_bb())
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 
     def handle_event(self, event):
         pass
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     def handle_collision(self, group, other):
         # fill here
@@ -69,3 +73,6 @@ class Zombie:
 =======
 
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732

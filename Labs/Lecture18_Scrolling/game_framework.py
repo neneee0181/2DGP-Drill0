@@ -44,36 +44,17 @@ def run(start_mode):
     stack = [start_mode]
     start_mode.init()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     global frame_time
     frame_time = 0.0
-    current_time = 0.0
-
-=======
->>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
-=======
->>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
-=======
->>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+    current_time = time.time()
     while running:
         stack[-1].handle_events()
         stack[-1].update()
         stack[-1].draw()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         frame_time = time.time() - current_time
         frame_rate = 1.0 / frame_time
         current_time += frame_time
-        print(f'Frame Time : {frame_time}, Frame Rate : {frame_rate}')
-=======
->>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
-=======
->>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
-=======
->>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+        # print(f'Frame Time: {frame_time}, Frame Rate: {frame_rate}')
 
     # repeatedly delete the top of the stack
     while (len(stack) > 0):

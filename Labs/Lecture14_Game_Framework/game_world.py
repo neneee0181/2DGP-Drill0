@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 world = [[] for _ in range(4)]
 
 def add_object(o, depth = 0):
@@ -14,6 +15,9 @@ objects = [[] for _ in range(4)]
 =======
 objects = [[] for _ in range(4)]
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+objects = [[] for _ in range(4)]
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 
 
 def add_object(o, depth = 0):
@@ -30,6 +34,7 @@ def render():
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     for layer in world:
 =======
     for layer in objects:
@@ -40,6 +45,9 @@ def render():
 =======
     for layer in objects:
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+    for layer in objects:
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
         for o in layer:
             o.draw()
 
@@ -48,6 +56,7 @@ def remove_object(o):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     for layer in world:
 =======
     for layer in objects:
@@ -58,11 +67,15 @@ def remove_object(o):
 =======
     for layer in objects:
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+    for layer in objects:
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
         if o in layer:
             layer.remove(o)
             return
 
     raise ValueError('Cannot delete non existing object')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -74,3 +87,5 @@ def clear():
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732

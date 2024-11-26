@@ -1,9 +1,12 @@
 from pico2d import *
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 class Grass:
     def __init__(self):
         self.image = load_image('grass.png')
@@ -18,9 +21,14 @@ class Grass:
     def get_bb(self):
         # fill here
 <<<<<<< HEAD
+<<<<<<< HEAD
         return 0, 0, 1600 - 1, 50
         pass
 =======
         pass
 
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+        pass
+
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732

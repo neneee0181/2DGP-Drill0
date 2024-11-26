@@ -10,9 +10,12 @@ from ball import Ball
 from zombie import Zombie
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 # boy = None
 
 def handle_events():
@@ -26,9 +29,12 @@ def handle_events():
             boy.handle_event(event)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 def init():
     global boy
 
@@ -39,6 +45,7 @@ def init():
     game_world.add_object(boy, 1)
 
     # fill here
+<<<<<<< HEAD
 <<<<<<< HEAD
     global balls
     balls = [Ball(random.randint(100, 1500), 60, 0) for _ in range(30)]
@@ -60,6 +67,10 @@ def init():
 
 
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+
+
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 
 
 def finish():
@@ -69,6 +80,7 @@ def finish():
 
 def update():
 <<<<<<< HEAD
+<<<<<<< HEAD
     game_world.update()  # 소년과 볼 위치가 다 업데이트 완료
     game_world.handle_collisions()
 =======
@@ -76,12 +88,18 @@ def update():
     # fill here
 
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+    game_world.update()
+    # fill here
+
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 
 def draw():
     clear_canvas()
     game_world.render()
     update_canvas()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 def pause():
@@ -91,10 +109,15 @@ def pause():
 def resume():
     pass
 =======
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
 def pause():
     pass
 
 def resume():
     pass
 
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
+=======
+>>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
