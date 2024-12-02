@@ -8,13 +8,19 @@ class FixedBackground:
 
     def __init__(self):
         self.image = load_image('futsal_court.png')
+<<<<<<< HEAD
         self.cw = get_canvas_width()
         self.ch = get_canvas_height()
         self.w, self.h = self.image.w, self.image.h
+=======
+        self.w, self.h = self.image.w, self.image.h
+        # fill here
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
         pass
 
     def draw(self):
         # modify followings
+<<<<<<< HEAD
         self.image.clip_draw_to_origin(self.window_left, self.window_bottom, self.cw, self.ch, 0, 0)
 
     pass
@@ -23,12 +29,22 @@ class FixedBackground:
         # fill here
         self.window_left = clamp(0, int(server.boy.x) - self.cw // 2, self.w - self.cw - 1)
         self.window_bottom = clamp(0, int(server.boy.y) - self.ch // 2, self.h - self.ch - 1)
+=======
+        self.image.draw(get_canvas_width()//2, get_canvas_height()//2)
+        pass
+
+    def update(self):
+        # fill here
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
         pass
 
     def handle_event(self, event):
         pass
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 class NewFixedBackground:
 
     def __init__(self):
@@ -49,6 +65,15 @@ class NewFixedBackground:
         pass
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 class TileBackground:
 
     def __init__(self):
@@ -58,7 +83,12 @@ class TileBackground:
         self.h = 600 * 3
 
         # fill here
+<<<<<<< HEAD
         self.tiles = [[load_image('cube%d%d.png' % (x, y)) for x in range(3)] for y in range(3)]
+=======
+
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def update(self):
         pass
@@ -68,6 +98,7 @@ class TileBackground:
         self.window_bottom = clamp(0, int(server.boy.y) - self.ch // 2, self.h - self.ch - 1)
 
         # fill here
+<<<<<<< HEAD
         tile_left = self.window_left // 800
         tile_right = (self.window_left + self.cw) // 800
         left_offset = self.window_left % 800
@@ -80,6 +111,8 @@ class TileBackground:
             for tx in range(tile_left, tile_right + 1):
                 self.tiles[ty][tx].draw_to_origin(-left_offset + (tx - tile_left) * 800,
                                                   -bottom_offset + (ty - tile_bottom) * 600)
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
         pass
 
 
@@ -87,6 +120,12 @@ cx = 900 % 800
 cy = 700 // 600
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 class InfiniteBackground:
 
     def __init__(self):
@@ -96,11 +135,21 @@ class InfiniteBackground:
         self.w = self.image.w
         self.h = self.image.h
 
+<<<<<<< HEAD
     def draw(self):
         self.image.clip_draw_to_origin(self.q3l, self.q3b, self.q3w, self.q3h, 0, 0)  # quadrant 3
         self.image.clip_draw_to_origin(self.q2l, self.q2b, self.q2w, self.q2h, 0, self.q3h)  # quadrant 2
         self.image.clip_draw_to_origin(self.q4l, self.q4b, self.q4w, self.q4h, self.q3w, 0)  # quadrant 4
         self.image.clip_draw_to_origin(self.q1l, self.q1b, self.q1w, self.q1h, self.q3w, self.q3h)  # quadrant 1
+=======
+
+
+    def draw(self):
+        self.image.clip_draw_to_origin(self.q3l, self.q3b, self.q3w, self.q3h, 0, 0)                        # quadrant 3
+        self.image.clip_draw_to_origin(self.q2l, self.q2b, self.q2w, self.q2h, 0, self.q3h)                 # quadrant 2
+        self.image.clip_draw_to_origin(self.q4l, self.q4b, self.q4w, self.q4h, self.q3w, 0)                 # quadrant 4
+        self.image.clip_draw_to_origin(self.q1l, self.q1b, self.q1w, self.q1h, self.q3w, self.q3h)          # quadrant 1
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def update(self):
         # quadrant 3
@@ -124,5 +173,16 @@ class InfiniteBackground:
         self.q1w = self.q4w
         self.q1h = self.q2h
 
+<<<<<<< HEAD
     def handle_event(self, event):
         pass
+=======
+
+    def handle_event(self, event):
+        pass
+
+
+
+
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b

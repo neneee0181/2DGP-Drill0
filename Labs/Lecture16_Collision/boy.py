@@ -23,9 +23,12 @@ FRAMES_PER_ACTION = 8
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
 
 
@@ -36,9 +39,12 @@ FRAMES_PER_ACTION = 8
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 class Idle:
     @staticmethod
     def enter(boy, e):
@@ -64,6 +70,7 @@ class Idle:
     def do(boy):
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 8
 =======
         boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
@@ -71,6 +78,9 @@ class Idle:
 =======
         boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+        boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
         # boy.frame = (boy.frame + 1) % 8
         if get_time() - boy.wait_time > 2:
             boy.state_machine.add_event(('TIME_OUT', 0))
@@ -82,12 +92,16 @@ class Idle:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 class Sleep:
     @staticmethod
     def enter(boy, e):
@@ -105,6 +119,7 @@ class Sleep:
         # boy.frame = (boy.frame + 1) % 8
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 8
 =======
         boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
@@ -114,6 +129,10 @@ class Sleep:
         boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
 
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+        boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     @staticmethod
     def draw(boy):
@@ -130,6 +149,7 @@ class Run:
     def enter(boy, e):
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if right_down(e) or left_up(e):  # 오른쪽으로 RUN
             boy.dir, boy.face_dir, boy.action = 1, 1, 1
         elif left_down(e) or right_up(e):  # 왼쪽으로 RUN
@@ -143,6 +163,11 @@ class Run:
             boy.dir, boy.face_dir, boy.action = 1, 1, 1
         elif left_down(e) or right_up(e): # 왼쪽으로 RUN
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+        if right_down(e) or left_up(e): # 오른쪽으로 RUN
+            boy.dir, boy.face_dir, boy.action = 1, 1, 1
+        elif left_down(e) or right_up(e): # 왼쪽으로 RUN
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
             boy.dir, boy.face_dir, boy.action = -1, -1, 0
 
     @staticmethod
@@ -152,17 +177,22 @@ class Run:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
     @staticmethod
     def do(boy):
         # boy.frame = (boy.frame + 1) % 8
         # boy.x += boy.dir * 5
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         boy.frame = (boy.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 8
@@ -172,6 +202,9 @@ class Run:
 =======
         boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+        boy.frame = (boy.frame + FRAMES_PER_ACTION*ACTION_PER_TIME*game_framework.frame_time) % 8
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
         boy.x += boy.dir * RUN_SPEED_PPS * game_framework.frame_time
         pass
@@ -183,6 +216,7 @@ class Run:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -193,6 +227,11 @@ class Run:
 
 
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+
+
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 class Boy:
 
     def __init__(self):
@@ -223,6 +262,7 @@ class Boy:
         self.state_machine.draw()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.font.draw(self.x - 10, self.y + 50, f'{self.ball_count:02d}', (255, 255, 0))
         draw_rectangle(*self.get_bb())
 =======
@@ -231,10 +271,14 @@ class Boy:
 =======
         self.font.draw(self.x-10, self.y + 50, f'{self.ball_count:02d}', (255, 255, 0))
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+        self.font.draw(self.x-10, self.y + 50, f'{self.ball_count:02d}', (255, 255, 0))
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def fire_ball(self):
         if self.ball_count > 0:
             self.ball_count -= 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             ball = Ball(self.x, self.y, self.face_dir * 10)
@@ -247,19 +291,25 @@ class Boy:
 =======
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
             ball = Ball(self.x, self.y, self.face_dir*10)
             game_world.add_object(ball)
 
     def get_bb(self):
         # fill here
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
         pass
 
     def handle_collision(self, group, other):
         # fill here
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if group == 'boy:ball':
@@ -273,3 +323,6 @@ class Boy:
 =======
         pass
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+        pass
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b

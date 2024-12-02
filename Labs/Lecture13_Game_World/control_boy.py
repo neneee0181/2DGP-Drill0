@@ -5,6 +5,7 @@ from pico2d import *
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from Labs.Lecture13_Game_World import game_world
 =======
 >>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
@@ -16,6 +17,8 @@ from Labs.Lecture13_Game_World import game_world
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 from grass import Grass
 from boy import Boy
 
@@ -36,6 +39,7 @@ def handle_events():
             boy.handle_event(event)
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +71,8 @@ def update_world():
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 def reset_world():
     global running
     global world
@@ -91,6 +97,7 @@ def update_world():
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1656090229e5b969c2b1c9b4ef5a19813bfe3e4
 =======
 >>>>>>> 3e9d9223c1dc05e5ac3de9882257ab9311a19ceb
@@ -100,10 +107,13 @@ def update_world():
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
 
 def render_world():
     clear_canvas()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,10 +140,15 @@ def render_world():
     for o in world:
         o.draw()
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+    for o in world:
+        o.draw()
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
     update_canvas()
 
 
 open_canvas()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +170,9 @@ reset_world()
 =======
 reset_world()
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+reset_world()
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 # game loop
 while running:
     handle_events()

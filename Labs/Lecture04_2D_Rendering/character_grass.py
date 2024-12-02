@@ -16,6 +16,7 @@ open_canvas()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 grass = load_image("grass.png")
 character = load_image("character.png")
 grass.draw_now(400,30)
@@ -47,4 +48,6 @@ delay(5)
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 close_canvas()

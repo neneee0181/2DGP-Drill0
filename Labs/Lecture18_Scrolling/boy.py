@@ -24,7 +24,10 @@ TIME_PER_ACTION = 0.5
 ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
 FRAMES_PER_ACTION = 8
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 class Idle:
 
     @staticmethod
@@ -180,6 +183,11 @@ class RunDown:
         pass
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 class Boy:
     def __init__(self):
         self.frame = 0
@@ -188,6 +196,7 @@ class Boy:
         self.font = load_font('ENCR10B.TTF', 24)
         self.state_machine = StateMachine(self)
         self.state_machine.start(Idle)
+<<<<<<< HEAD
         self.ball_count = 0
         self.state_machine.set_transitions(
             {
@@ -204,13 +213,31 @@ class Boy:
                 RunLeftDown: {left_up: RunDown, downkey_up: RunLeft, upkey_down: RunLeft, right_down: RunDown},
                 RunDown: {downkey_up: Idle, left_down: RunLeftDown, upkey_down: Idle, right_down: RunRightDown,
                           left_up: RunRightDown, right_up: RunLeftDown},
+=======
+        self.state_machine.set_transitions(
+            {
+                Idle: {right_down: RunRight, left_down: RunLeft, left_up: RunRight, right_up: RunLeft, upkey_down: RunUp, downkey_down: RunDown, upkey_up: RunDown, downkey_up: RunUp},
+                RunRight: {right_up: Idle, left_down: Idle, upkey_down: RunRightUp, upkey_up: RunRightDown, downkey_down: RunRightDown, downkey_up: RunRightUp},
+                RunRightUp: {upkey_up: RunRight, right_up: RunUp, left_down: RunUp, downkey_down: RunRight},
+                RunUp: {upkey_up: Idle, left_down: RunLeftUp, downkey_down: Idle, right_down: RunRightUp, left_up: RunRightUp, right_up: RunLeftUp},
+                RunLeftUp: {right_down: RunUp, downkey_down: RunLeft, left_up: RunUp, upkey_up: RunLeft},
+                RunLeft: {left_up: Idle, upkey_down: RunLeftUp, right_down: Idle, downkey_down: RunLeftDown, upkey_up: RunLeftDown, downkey_up: RunLeftUp},
+                RunLeftDown: {left_up: RunDown, downkey_up: RunLeft, upkey_down: RunLeft, right_down: RunDown},
+                RunDown: {downkey_up: Idle, left_down: RunLeftDown, upkey_down: Idle, right_down: RunRightDown, left_up: RunRightDown, right_up: RunLeftDown},
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
                 RunRightDown: {right_up: RunDown, downkey_up: RunRight, left_down: RunDown, upkey_down: RunRight}
             }
         )
 
         # modify here
+<<<<<<< HEAD
         self.x = server.background.w / 2  # x 값의 범위
         self.y = server.background.h / 2  # y값의 범위
+=======
+        self.x, self.y = get_canvas_width() / 2, get_canvas_height() / 2
+
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def update(self):
         # modify here
@@ -219,14 +246,20 @@ class Boy:
         self.x += math.cos(self.dir) * self.speed * game_framework.frame_time
         self.y += math.sin(self.dir) * self.speed * game_framework.frame_time
 
+<<<<<<< HEAD
         # 월드 기준으로 x,y 제한 필요
         self.x = clamp(25.0, self.x, server.background.w - 25.0)
         self.y = clamp(30.0, self.y, server.background.h - 30.0)
+=======
+        self.x = clamp(25.0, self.x, get_canvas_width()-25.0)
+        self.y = clamp(25.0, self.y, get_canvas_height()-25.0)
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def handle_event(self, event):
         self.state_machine.handle_event(('INPUT', event))
 
     def draw(self):
+<<<<<<< HEAD
         sx = self.x - server.background.window_left
         sy = self.y - server.background.window_bottom
         self.image.clip_draw(int(self.frame) * 100, self.action * 100, 100, 100, sx, sy)
@@ -243,3 +276,17 @@ class Boy:
         if group == 'boy:ball':
             self.ball_count += 1
         pass
+=======
+        self.image.clip_draw(int(self.frame) * 100, self.action * 100, 100, 100, self.x, self.y)
+        self.font.draw(int(self.x - 100), int(self.y + 60), f'({self.x:5.5}, {self.y:5.5})', (255, 255, 0))
+
+
+    def get_bb(self):
+        return self.x - 20, self.y - 50, self.x + 20, self.y + 50
+
+    def handle_collision(self, group, other):
+        pass
+
+
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b

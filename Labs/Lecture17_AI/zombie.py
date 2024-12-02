@@ -8,9 +8,13 @@ from behavior_tree import BehaviorTree, Action, Sequence, Condition, Selector
 import play_mode
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 # zombie Run Speed
 PIXEL_PER_METER = (10.0 / 0.3)  # 10 pixel 30 cm
 RUN_SPEED_KMPH = 10.0  # Km / Hour
@@ -38,22 +42,31 @@ class Zombie:
             Zombie.marker_image = load_image('hand_arrow.png')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
     def __init__(self, x=None, y=None):
         self.x = x if x else random.randint(100, 1180)
         self.y = y if y else random.randint(100, 924)
         self.load_images()
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.dir = 0.0  # radian 값으로 방향을 표시
 =======
         self.dir = 0.0      # radian 값으로 방향을 표시
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+        self.dir = 0.0      # radian 값으로 방향을 표시
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
         self.speed = 0.0
         self.frame = random.randint(0, 9)
         self.state = 'Idle'
         self.ball_count = 0
+<<<<<<< HEAD
 <<<<<<< HEAD
         self.tx, self.ty = 0, 0
 
@@ -67,22 +80,33 @@ class Zombie:
         self.build_behavior_tree()
 
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+
+        self.build_behavior_tree()
+
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def get_bb(self):
         return self.x - 50, self.y - 50, self.x + 50, self.y + 50
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     def update(self):
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % FRAMES_PER_ACTION
         # fill here
         self.bt.run()
 =======
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def update(self):
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % FRAMES_PER_ACTION
         # fill here
 
+<<<<<<< HEAD
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def draw(self):
         if math.cos(self.dir) < 0:
@@ -92,9 +116,12 @@ class Zombie:
         self.font.draw(self.x - 10, self.y + 60, f'{self.ball_count}', (0, 0, 255))
         draw_rectangle(*self.get_bb())
 <<<<<<< HEAD
+<<<<<<< HEAD
         Zombie.marker_image.draw(self.tx - 25, self.ty - 25)
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def handle_event(self, event):
         pass
@@ -103,6 +130,7 @@ class Zombie:
         if group == 'zombie:ball':
             self.ball_count += 1
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     def set_target_location(self, x=None, y=None):
         self.tx, self.ty = x, y
@@ -177,6 +205,8 @@ class Zombie:
 
         self.bt = BehaviorTree(root)
 =======
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
     def set_target_location(self, x=None, y=None):
         pass
@@ -203,5 +233,8 @@ class Zombie:
         pass
 
     def build_behavior_tree(self):
+<<<<<<< HEAD
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
         pass

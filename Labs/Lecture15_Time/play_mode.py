@@ -6,6 +6,7 @@ from grass import Grass
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from bird import Boy
 
 =======
@@ -17,6 +18,9 @@ from boy import Boy
 =======
 from boy import Boy
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+from boy import Boy
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
 # boy = None
 
@@ -33,6 +37,7 @@ def handle_events():
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
@@ -40,6 +45,8 @@ def handle_events():
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 def init():
     global grass
     global boy
@@ -61,6 +68,7 @@ def update():
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     # 성능이 후진 컴터
     # delay(0.5)
 
@@ -70,6 +78,8 @@ def update():
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
 def draw():
     clear_canvas()
@@ -79,6 +89,7 @@ def draw():
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 def pause():
     pass
@@ -91,12 +102,15 @@ def resume():
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 def pause():
     pass
 
 def resume():
     pass
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2ab3e2ba9f1fe60aeb049069248fe7de52a2e4ad
@@ -104,3 +118,5 @@ def resume():
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b

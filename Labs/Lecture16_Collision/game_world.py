@@ -1,6 +1,7 @@
 world = [[] for _ in range(4)]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 collision_pairs = {}
 
 
@@ -21,15 +22,20 @@ def add_objects(ol, depth=0):
 =======
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
 def add_object(o, depth = 0):
     world[depth].append(o)
 
 def add_objects(ol, depth = 0):
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
     world[depth] += ol
 
 
@@ -44,6 +50,7 @@ def render():
         for o in layer:
             o.draw()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -64,14 +71,19 @@ def remove_object(o):
 =======
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 def remove_object(o):
     for layer in world:
         if o in layer:
             layer.remove(o)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
             return
     raise ValueError('Cannot delete non existing object')
 
@@ -81,6 +93,7 @@ def clear():
         layer.clear()
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 # fill here
@@ -108,11 +121,16 @@ def handle_collisions():
 =======
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
 
 # fill here
 def collide(a, b):
     pass
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5017ad4f79f2dcc517382628b1828c15b3f560dd
 =======
 >>>>>>> 067e7f49c5546d6fab4898d2ccb98fbb2d543732
+=======
+>>>>>>> 12651feccab2fd3780e9fb8f262257ced35c410b
